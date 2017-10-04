@@ -13,7 +13,6 @@ class BookList extends Component {
     return (
       <div>
         <p>hello hello hello I'm the booklist</p>
-        <button className='btn btn-primary' onClick={this._mapBooks}>git berks</button>
         <ul className="list-group col-sm-4">
           {books.map((book) => {
             return(

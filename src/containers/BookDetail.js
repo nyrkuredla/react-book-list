@@ -8,7 +8,8 @@ import { bindActionCreators } from 'redux';
 class BookDetail extends Component {
 
   render() {
-    if(!this.props.book) {
+    console.log("bookdetail props", this.props)
+    if(!this.props.book.title) {
       return (
         <div>Select a book to get started!</div>
       )
@@ -21,7 +22,7 @@ class BookDetail extends Component {
         <div>Author: {this.props.book.author}</div>
         <div>Price: ${this.props.book.price} USD</div>
         <div>Published: {this.props.book.published_date} by {this.props.book.publisher}</div>
-        <div>Genre: {this.props.book.category.join(", ")} </div>
+        {/* <div>Genre: {this.props.book.category.join(", ")} </div> */}
       </div>
     );
   }
@@ -29,6 +30,7 @@ class BookDetail extends Component {
 
 //activeBook reducer creates activeBook state.
 function mapStateToProps(state) {
+  console.log(state);
   return {
     book: state.activeBook,
   };

@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import BookList from '../containers/BookList'
+import BookDetail from '../containers/BookDetail'
 import '../styles/App.css';
 
 class App extends Component {
   render() {
-    console.log('app state', this.state)
     return (
       <div className="App">
         <BookList />
+        <BookDetail />
       </div>
     );
   }

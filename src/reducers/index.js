@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { BOOK_SELECTED } from '../constants'
+import BOOK_SELECTED from '../constants'
 
 import bookList from '../data/books';
 
@@ -9,8 +9,7 @@ const initialState = bookList;
 
 //STATE = NULL es6 syntax that says if state comes in undefined, it becomes null by default...
 //b/c redux does not allow to return undefined
-const ActiveBook = (state = initialState, action) => {
-  console.log("it's the state on the active book, yay", state)
+const ActiveBook = (state = {}, action) => {
   switch(action.type) {
     case 'BOOK_SELECTED':
       console.log('selectin the book, woo')
