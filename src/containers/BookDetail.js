@@ -11,18 +11,19 @@ class BookDetail extends Component {
     console.log("bookdetail props", this.props)
     if(!this.props.book.title) {
       return (
-        <div>Select a book to get started!</div>
+        <div className="title mx-auto">Select a book to get started!</div>
       )
     }
     return (
-      <div className="col-md-4">
-        <h3> Details for: </h3>
-        <h4 className="title">{this.props.book.title}</h4>
-        <div>{this.props.book.pages} pages</div>
-        <div>Author: {this.props.book.author}</div>
-        <div>Price: ${this.props.book.price} USD</div>
-        <div>Published: {this.props.book.published_date} by {this.props.book.publisher}</div>
-        {/* <div>Genre: {this.props.book.category.join(", ")} </div> */}
+      <div className="card col-md-6">
+        <div className="card-block mx-auto">
+          <h3 className="card-title title">{this.props.book.title}</h3>
+          <p className="card-text">{this.props.book.pages} pages</p>
+          <p className="card-text"><em>Author: </em> {this.props.book.author}</p>
+          <p className="card-text"><em>Price: </em> ${this.props.book.price} USD</p>
+          <p className="card-text"><em>Published: </em> {this.props.book.published_date} by {this.props.book.publisher}</p>
+          <p className="card-text"><em>Genre: </em> {this.props.book.category.join(", ")} </p>
+        </div>
       </div>
     );
   }

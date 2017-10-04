@@ -11,15 +11,14 @@ class BookList extends Component {
     let books = this.props.books;
 
     return (
-      <div>
-        <p>hello hello hello I'm the booklist</p>
-        <ul className="list-group col-sm-4">
+      <div className="col-md-6">
+        <ul className="list-group">
           {books.map((book) => {
             return(
               <li
                 key={book.id}
                 onClick={() => this.props.selectBook(book)}
-                className="list-group-item">{book.title}</li>
+                className="list-group-item"><p className="text">{book.title}</p></li>
           )
         })}
         </ul>

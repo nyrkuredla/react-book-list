@@ -1,4 +1,46 @@
+/*FONTS*/
+
+/*Headers*/
+/*font-family: 'Rye', cursive;
+Body*/
+/*font-family: 'Lato', sans-serif;*/
+
+/*COLORS*/
+
+
+body {
+  background-color: #010E1C;
+  height: 100vh;
+  width: 100vw;
+  padding: 5%;
+  font-family: 'Lato', sans-serif;
+  color: #ABB4BD
+
+}
+
 .App {
   text-align: center;
-  background-color: green;
+  background-color: #010E1C;
+  margin-bottom: 61px;
+}
+
+.jumbotron, .card, .list-group-item {
+  background-color: #031B35;
+}
+
+.title, .text{
+  color: #ABB4BD;
+}
+
+.title {
+  font-family: 'Rye', cursive;
+}
+
+.footer {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #010E1C;
+  color: #ABB4BD;
+  text-align: center;
 }
